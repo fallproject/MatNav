@@ -1,0 +1,69 @@
+html, body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  font-family: Arial; }
+
+icon {
+  font-family: "Material Icons"; }
+
+.MatNav {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 75px;
+  margin: 0px;
+  bottom: 0;
+  padding: 0px;
+  background-color: red; }
+
+.MatNav-Item-Container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 0px;
+  list-style-type: none;
+  width: 25%; }
+
+.MatNav-Item {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9.5px 0px; }
+
+.MatNav-Item > p {
+  margin: 5px; }
+
+@media screen and (min-width: 1024px) {
+  .MatNav {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    width: 75px;
+    height: 100%;
+    margin: 0px;
+    left: 0;
+    padding: 0px;
+    background-color: red; }
+
+  .MatNav-Item-Container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: red;
+    justify-content: center;
+    margin: 0px;
+    list-style-type: none;
+    width: 75px;
+    height: 75px; }
+
+  .MatNav-Item {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9.5px 0px; }
+
+  .MatNav-Item > p {
+    margin: 5px; } }
+
+/*# sourceMappingURL=MatNav.css.map */
