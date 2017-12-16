@@ -1,0 +1,9 @@
+{
+  "name": "MatNav",
+  "version": "1.0.0",
+  "description": "Transforming Bottom and Left Navigation Based Off Material Design Guidelines",
+  "main": "index.js",
+  "repository": "https://github.com/SimplyCodin/MatNav.git",
+  "author": "SimplyCodin",
+  "license": "CC0"
+}

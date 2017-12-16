@@ -1,20 +1,47 @@
-var gulp        = require('gulp');
+var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
-var reload      = browserSync.reload;
+var sass = require('gulp-sass');
+var reload = browserSync.reload;
 
-// Save a reference to the `reload` method
+var src = {
+    scss: 'src/*.sass',
+    css: 'css',
+    html: '*.html'
+};
 
-// Watch scss AND html files, doing different things with each.
-gulp.task('serve', function () {
-
-    // Serve files from the root of this project
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], function() {
     browserSync.init({
-        server: {
-            baseDir: "./"
-        },
-		port:8080
+        server: './app'
     });
 
-    gulp.watch("*.html").on("change", reload);
-	gulp.watch("*.css").on("change", reload);
+    gulp.watch(src.scss, ['sass']);
+    gulp.watch(src.html).on('change', reload);
 });
+
+// Compile sass into CSS
+gulp.task('sass', function() {
+    return gulp
+    var plugins = [
+        autoprefixer({browsers: ['last 1 version']}),
+        cssnano()
+    ];
+        .src(src.sass)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest(src.css))
+        return gulp.src(src.css)
+            .pipe(postcss(plugins))
+            .pipe(gulp.dest(src.css))
+        .pipe(reload({ stream: true }));
+});
+
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var cssnano = require('cssnano');
+
+gulp.task('css', function () {
+    return gulp.src('./src/*.css')
+        .pipe(postcss(plugins))
+        .pipe(gulp.dest('./dest'));
+});
+gulp.task('default', ['serve']);
