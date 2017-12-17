@@ -1,0 +1,88 @@
+// Copyright © SimplyCodin 2017
+$menuheight: 56px
+$navcolor: red
+$toppadding: 0px
+
+$menuitemmaxwidth: 168px
+$menuitemminwidth: 80px
+
+// $textcolor: rgba(0,0,0,0.54)
+$belowtext: 10px
+$iconcolor: #ffffff
+$iconmargin: 6px
+$iconsize: 24px
+$textcolor: #ffffff
+
+$content: main
+$contentoffset: 5px
+
+.MatNav
+	position: fixed
+	bottom: 0
+	height: $menuheight
+	background-color: $navcolor
+	width: 100%
+.MatNav-Container
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: center
+
+.MatNav-Item-Container
+	display: flex
+	flex-direction: row-reverse
+	text-align: center
+	justify-content: center
+	margin: 0px
+	list-style-type: none
+	width: 100%
+	max-width: $menuitemmaxwidth
+	min-width: $menuitemminwidth
+	height: $menuheight
+.MatNav-Icon
+	color: $textcolor
+	padding: 0
+	margin: $iconmargin
+	display: block
+	text-decoration: none
+	height: $iconsize
+	width: $iconsize
+	font-size: $iconsize
+.MatNav-Label
+	position: fixed
+	margin: 0 0 $belowtext 0
+	color: $iconcolor
+	bottom: 0
+#{$content}
+	margin: 0 0 $menuheight 0
+a[class= "MatNav-Item-Container"]
+	text-decoration: none
+
+@media screen and (min-width: 768px)
+	.MatNav
+		width: $menuheight
+		height: 100%
+		left: 0
+		border-left: 1px #efefef
+	.MatNav-Container
+		padding-top: $toppadding
+		height: 100%
+		width: $menuheight
+		flex-direction: column
+		justify-content: unset
+
+	.MatNav-Item-Container
+		display: flex
+		flex-direction: column-reverse
+		height: $menuheight
+		width: $menuheight
+		justify-content: center
+		text-align: center
+		max-width: unset
+		min-width: unset
+	.MatNav-Label
+		display: none
+	.MatNav-Icon
+		margin: auto
+	#{$content}
+		margin: 0 0 0 $menuheight + $contentoffset

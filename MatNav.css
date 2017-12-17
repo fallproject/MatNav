@@ -1,69 +1,113 @@
-html, body {
-  padding: 0px;
-  margin: 0px;
-  width: 100%;
-  height: 100%;
-  font-family: Arial; }
-
-icon {
-  font-family: "Material Icons"; }
-
 .MatNav {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  height: 75px;
-  margin: 0px;
+  position: fixed;
   bottom: 0;
-  padding: 0px;
-  background-color: red; }
+  height: 56px;
+  background-color: red;
+  width: 100%; }
+
+.MatNav-Container {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .MatNav-Item-Container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: 0px;
   list-style-type: none;
-  width: 25%; }
+  width: 100%;
+  max-width: 168px;
+  min-width: 80px;
+  height: 56px; }
 
-.MatNav-Item {
+.MatNav-Icon {
   color: #ffffff;
+  padding: 0;
+  margin: 6px;
+  display: block;
   text-decoration: none;
-  padding: 9.5px 0px; }
+  height: 24px;
+  width: 24px;
+  font-size: 24px; }
 
-.MatNav-Item > p {
-  margin: 5px; }
+.MatNav-Label {
+  position: fixed;
+  margin: 0 0 10px 0;
+  color: #ffffff;
+  bottom: 0; }
 
-@media screen and (min-width: 1024px) {
+main {
+  margin: 0 0 56px 0; }
+
+a[class="MatNav-Item-Container"] {
+  text-decoration: none; }
+
+@media screen and (min-width: 768px) {
   .MatNav {
-    display: flex;
-    flex-flow: column;
-    position: absolute;
-    width: 75px;
+    width: 56px;
     height: 100%;
-    margin: 0px;
     left: 0;
-    padding: 0px;
-    background-color: red; }
-
-  .MatNav-Item-Container {
-    display: flex;
+    border-left: 1px #efefef; }
+  .MatNav-Container {
+    padding-top: 0px;
+    height: 100%;
+    width: 56px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
-    text-align: center;
-    background-color: red;
+    -webkit-box-pack: unset;
+    -webkit-justify-content: unset;
+    -ms-flex-pack: unset;
+    justify-content: unset; }
+  .MatNav-Item-Container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    height: 56px;
+    width: 56px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    margin: 0px;
-    list-style-type: none;
-    width: 75px;
-    height: 75px; }
-
-  .MatNav-Item {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 9.5px 0px; }
-
-  .MatNav-Item > p {
-    margin: 5px; } }
+    text-align: center;
+    max-width: unset;
+    min-width: unset; }
+  .MatNav-Label {
+    display: none; }
+  .MatNav-Icon {
+    margin: auto; }
+  main {
+    margin: 0 0 0 61px; } }
 
 /*# sourceMappingURL=MatNav.css.map */
